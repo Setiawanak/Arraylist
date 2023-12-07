@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class SequenceNumbers {
+    public static void main(String[] args) {
+        int[] numbers = {8, 2, 9, 6, 3, 92, 25, 21, 78, 31};
+        
+        // Membuat List 2 kosong untuk dipindahkan ke Nomer Ganjil Dan Genap
+        List<Integer> oddNumbers = new ArrayList<>();
+        List<Integer> evenNumbers = new ArrayList<>();
+        
+        // Mengurutkan Nomerr di Array 
+        java.util.Arrays.sort(numbers);
+        
+        // Iterate over the sorted numbers and add them to their respective lists
+        for (int i = 0; i < numbers.length; i++) {
+            int number = numbers[i];
+            if (number % 2 == 0) {
+                evenNumbers.add(number);
+            } else {
+                oddNumbers.add(number);
+            }
+        }
+        
+        System.out.println("Genap : " + evenNumbers);
+        System.out.println("Ganjil : " + oddNumbers);
+    }
+}
